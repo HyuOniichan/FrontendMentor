@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Product preview card component</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+
+  
+
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+
+
+    .container {
+      background-color: hsl(30, 38%, 92%); 
+      min-height: 100vh; 
+      display: flex; 
+      justify-content: center; 
+      align-items: center; 
+
+    }
+
+    .product-box {
+      background-color: white; 
+      display: flex; 
+      flex-direction: row; 
+      width: 450px;
+      height: 350px;  
+      border-radius: 10px; 
+    }
+
+    .product-image-box {
+      flex: 1; 
+      border-radius: 10px;
+    }
+    .product-image {
+      height: 350px; 
+      padding: 0px; 
+      object-fit: cover; 
+      object-position: center; 
+      border-radius: 10px; 
+      
+    }
+    .product-info-box {
+      flex: 1; 
+      padding: 0 20px; 
+    }
+    .product-info-box p {
+      padding: 0; 
+      font-size: 14px; 
+      
+    }
+    .product-info-box-01 {
+      font-family: Montserrat, Arial; 
+      color: hsl(228, 12%, 48%); 
+    }
+    .product-info-box-02 {
+      font-family: Fraunces, Arial; 
+      font-size: 25px; 
+    }
+    .product-info-box-03 {
+      font-family: Montserrat, Arial; 
+      font-size: 11px; 
+      color: hsl(228, 12%, 48%); 
+    }
+    .product-info-box-cost {
+      font-family: Fraunces, Arial; 
+      display: flex; 
+      flex-direction: row; 
+      align-items: center; 
+      column-gap: 15px; 
+      margin: 20px 0; 
+    }
+    .product-info-box-cost-01 {
+      height: 40px; 
+      font-size: 25px; 
+      color:hsl(158, 36%, 37%); 
+      font-weight: 500; 
+    }
+    .product-info-box-cost-02 {
+      color: hsl(228, 12%, 48%); 
+      font-size: 10px; 
+      text-decoration: line-through; 
+    }
+    .product-info-box-cart {
+      background-color: hsl(158, 36%, 37%); 
+      color: white; 
+      border: none; 
+      border-radius: 5px; 
+      font-size: 14px; 
+      width: 180px; 
+      height: 40px; 
+    }
+
+    
+    @media screen and (max-width: 500px) {
+      .product-box {
+        flex-direction: column; 
+        width: 375px; 
+        height: 600px; 
+      }
+      .product-image-box {
+        width: 375px; 
+        height: 250px;
+      }
+      .product-image {
+        width: 375px; 
+        height: 250px;
+      }
+      .product-info-box {
+        margin: 0 10px; 
+      }
+      .product-info-box-01 {
+        width: 300px; 
+      }
+      .product-info-box-cart {
+        width: 300px; 
+        height: 45px;
+        justify-content: center;
+      }
+      .product-info-box-cost {
+        margin: 15px 0; 
+      }
+    }
+
+
+  </style>
+</head>
+<body>
+  <!-- 
+    Preview
+
+    Gabrielle Essence Eau De Parfum
+
+    A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+    Perfumer-Creator for the House of CHANEL.
+
+    $149.99
+    $169.99
+
+    Add to Cart
+  -->
+  
+  <div class="container">
+    <div class="product-box">
+      <div class="product-image-box">
+        <img src="images/image-product-desktop.jpg" alt="ProductImage" class="product-image" /> 
+      </div>
+      <div class="product-info-box">
+        <p class="product-info-box-01">
+          PERFUME 
+        </p>
+        <h1 class="product-info-box-02"> 
+          Gabrielle Essence Eau De Parfum
+        </h1>
+        <div class="product-info-box-03">
+          A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+          Perfumer-Creator for the House of CHANEL.
+        </div>
+        <div class="product-info-box-cost">
+          <div class="product-info-box-cost-01"> $149.99 </div>  
+          <div class="product-info-box-cost-02"> $169.99 </div>
+        </div>
+        <button class="product-info-box-cart">
+          Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">HyuOniichan</a>.
+  </div>
+</body>
+</html>
