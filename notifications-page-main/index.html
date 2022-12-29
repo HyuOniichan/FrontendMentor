@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Notifications page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap'); 
+
+    body {
+      background-color: hsl(210, 60%, 98%); 
+      font-family: 'Plus Jakarta Sans', Arial; 
+    }
+    .container {
+      display: flex; 
+      justify-content: center; 
+      align-items: center; 
+      min-height: 100vh; 
+    }
+    .notifications-box {
+      background-color: white; 
+      display: flex; 
+      flex-direction: column; 
+      width: 610px; 
+      padding: 5px 10px ; 
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px; 
+    }
+
+    .header {
+      flex: 1; 
+      display: flex; 
+      flex-direction: row; 
+      align-items: center;
+      margin-bottom: 10px; 
+      margin: 0 10px; 
+      width: 100%; 
+    }
+    .header-title {
+      display: flex; 
+      flex-direction: row; 
+      align-items: center;
+    }
+
+    h1 {  /* header-title-notifications */ 
+      font-size: 20px; 
+      font-weight: 800; 
+      margin-right: 10px; 
+      margin-left: 25px; 
+    }
+
+    .header-title-number {
+      color: white; 
+      background-color: hsl(219, 85%, 26%); 
+      font-weight: 500;
+      padding: 2px 9px; 
+      border: none; 
+      border-radius: 4px; 
+    }
+    .header-mark {
+      flex: 1; 
+      text-align: right; 
+      font-size: 12px; 
+      color: hsl(219, 12%, 42%); 
+      font-weight: 500; 
+      transition: all 0.15s; 
+      padding-right: 20px; 
+    }
+    .header-mark:hover {
+      cursor: pointer; 
+      color:hsl(219, 85%, 26%); 
+    }
+
+
+    .noti {
+      display: flex;
+      flex-direction: column; 
+      gap: 10px; 
+    } 
+    .noti p {   /* noti-title-time */ 
+      color: hsl(219, 14%, 63%); 
+      font-size: 12px; 
+      margin-bottom: 0; 
+      margin-top: 5px; 
+    }
+    .noti-avatar {
+      display: flex; 
+      height: 100%; 
+      align-items: top;
+    }
+    .noti-avatar img {
+      width: 35px; 
+      padding: 15px; 
+    }
+    .noti-01, .noti-02, .noti-03 {
+      display: flex; 
+      flex-direction: row; 
+      margin: 0 20px; 
+      align-items: center; 
+    }
+    .noti-title-name {
+      font-weight: 800; 
+      font-size: 14px; 
+      transition: all 0.15s; 
+    }
+    .noti-title-name:hover {
+      color:hsl(219, 85%, 26%); 
+      cursor: pointer; 
+    }
+    .noti-title-text {
+      font-size: 14px; 
+      font-weight: 500; 
+      color: hsl(219, 12%, 42%); 
+    }
+    .noti-title-reddot {
+      font-size: 7px; 
+    }
+    .noti-active {
+      color: hsl(219, 12%, 42%); 
+      font-weight: 800;
+      font-size: 12px; 
+      transition: all 0.15s; 
+    }
+    .noti-active:hover {
+      color: hsl(219, 85%, 26%); 
+      cursor: pointer; 
+    }
+    .noti-01 {
+      background-color: hsl(210, 60%, 98%); 
+      border-radius: 7px; 
+    }
+    .RH-message {
+      margin: 10px 25px 0 0; 
+      border-radius: 5px; 
+      border: 1px solid hsl(205, 33%, 90%); 
+      font-size: 14px; 
+      padding: 15px; 
+      color: hsl(219, 12%, 42%); 
+      transition: all 0.15s; 
+    }
+    .RH-message:hover {
+      cursor: pointer; 
+      background-color: hsl(211, 68%, 94%);
+    }
+    .KS-image {
+      flex: 1; 
+      display: flex; 
+      justify-content: right;
+      margin-right: 20px; 
+    }
+    .KS-image img {
+      width: 35px; 
+      border: 2px solid white; 
+      border-radius: 10px; 
+      transition: all 0.15s; 
+    }
+    .KS-image img:hover {
+      cursor: pointer; 
+      border-color: hsl(205, 33%, 90%); 
+    }
+  </style>
+</head>
+<body>
+  <div class="container"> 
+    <div class="notifications-box">
+      <div class="header">
+        <div class="header-title">
+          <h1 class="header-title-notifications">
+            Notifications
+          </h1>
+          <button class="header-title-number">
+            3 
+          </button>
+        </div> 
+        <div class="header-mark">
+          <span> Mark all as read </span>
+        </div>
+      </div>
+      <div class="noti">
+        <div class="noti-01">
+          <div class="noti-avatar">
+            <img src="assets/images/avatar-mark-webber.webp" alt="avatar" /> 
+          </div> 
+          <div class="noti-title">
+            <span class="noti-title-name"> Mark Webber </span> 
+            <span class="noti-title-text"> reacted to your recent post </span>
+            <span class="noti-active"> My first tournament today! </span> 
+            <span class="noti-title-reddot"> &#128308 </span>
+            <p class="noti-title-time"> 1m ago </p>
+          </div>
+        </div>
+        <div class="noti-01">
+          <div class="noti-avatar">
+            <img src="assets/images/avatar-angela-gray.webp" alt="avatar" /> 
+          </div> 
+          <div class="noti-title">
+            <span class="noti-title-name"> Angela Gray </span> 
+            <span class="noti-title-text"> followed you </span>
+            <span class="noti-title-reddot"> &#128308 </span>
+            <p class="noti-title-time"> 5m ago </p>
+          </div>
+        </div>
+        <div class="noti-01">
+          <div class="noti-avatar">
+            <img src="assets/images/avatar-jacob-thompson.webp" alt="avatar"/> 
+          </div> 
+          <div class="noti-title">
+            <span class="noti-title-name"> Jacob Thompson </span> 
+            <span class="noti-title-text"> has joined your group </span>
+            <span class="noti-active" style="color: hsl(219, 85%, 26%); "> Chess Club </span>
+            <span class="noti-title-reddot"> &#128308 </span>
+            <p class="noti-title-time"> 1 day ago </p>
+          </div>
+        </div>
+        <div class="noti-02">
+          <div class="noti-avatar">
+            <img src="assets/images/avatar-rizky-hasanuddin.webp" alt="avatar" style="align-items: top;"/> 
+          </div> 
+          <div class="noti-title">
+            <span class="noti-title-name"> Rizky Hasanuddin </span> 
+            <span class="noti-title-text"> sent you a private message </span>
+            <p class="noti-title-time"> 5 days ago </p>
+            <div class="RH-message">
+              Hello, thanks for setting up the Chess Club. I've been a member 
+              for a few weeks now and I'm already having lots of fun and 
+              improving my game.
+            </div>
+          </div>
+        </div>
+        <div class="noti-03">
+          <div class="noti-avatar">
+            <img src="assets/images/avatar-kimberly-smith.webp" alt="avatar" /> 
+          </div> 
+          <div class="noti-title">
+            <span class="noti-title-name"> Kimberly Smith </span> 
+            <span class="noti-title-text"> commented on your picture </span>
+            <p class="noti-title-time"> 1 week ago </p> 
+          </div>
+          <div class="KS-image">
+            <img src="assets/images/image-chess.webp" alt="image-chess"/> 
+          </div>
+        </div>
+        <div class="noti-03">
+          <div class="noti-avatar">
+            <img src="assets/images/avatar-nathan-peterson.webp" alt="avatar" /> 
+          </div> 
+          <div class="noti-title">
+            <span class="noti-title-name"> Nathan Peterson </span> 
+            <span class="noti-title-text"> reacted to your recent post </span>
+            <span class="noti-active"> 5 end-game strategies to increase your win rate </span>
+            <p class="noti-title-time"> 2 weeks ago </p>
+          </div>
+        </div>
+        <div class="noti-03">
+          <div class="noti-avatar">
+            <img src="assets/images/avatar-anna-kim.webp" alt="avatar" /> 
+          </div> 
+          <div class="noti-title">
+            <span class="noti-title-name"> Anna Kim </span> 
+            <span class="noti-title-text"> left the group</span>
+            <span class="noti-active"> Chess Club </span>
+            <p class="noti-title-time"> 2 weeks ago </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#"> HyuOniichan </a>.
+  </div>
+</body>
+</html>
