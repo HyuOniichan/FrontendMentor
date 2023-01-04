@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  
+</head>
+<body>
+
+  <!--
+
+  -> Rating state start 
+
+  How did we do?
+
+  Please let us know how we did with your support request. All feedback is appreciated 
+  to help us improve our offering!
+
+  1 2 3 4 5
+
+  Submit
+
+  -> Rating state end 
+
+  -> Thank you state start 
+
+  You selected -> Add rating here ->  out of 5
+
+  Thank you!
+
+  We appreciate you taking the time to give a rating. If you ever need more support, 
+  don’t hesitate to get in touch!
+
+  -> Thank you state end 
+
+  -->
+
+
+
+  <div class="container">
+    <div class="rating-box">
+      <div class="star">
+        <button class="star-icon">
+          <img src="images/icon-star.svg" alt="star" /> 
+        </button>
+      </div>
+      <div class="rating">
+        <div class="rating-content"> 
+          <h1 class="rating-content-title"> How did we do? </h1>
+          <p class="rating-content-text"> Please let us know how we did with 
+            your support request. All feedback is appreciated to help us 
+            improve our offering! 
+          </p>
+        </div>
+        <div class="rating-level"> 
+          <button id="RateButt1" onclick="ratingChoose(1)"> 1 </button>
+          <button id="RateButt2" onclick="ratingChoose(2)"> 2 </button>
+          <button id="RateButt3" onclick="ratingChoose(3)"> 3 </button>
+          <button id="RateButt4" onclick="ratingChoose(4)"> 4 </button>
+          <button id="RateButt5" onclick="ratingChoose(5)"> 5 </button>
+        </div>
+        <a href="rating.html" style="text-decoration: none; ">
+          <div class="rating-submit">
+            <button id="next">SUBMIT</button>
+          </div>
+        </a>
+        
+      </div>
+    </div>
+  </div>
+
+
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#"> HyuOniichan </a>.
+  </div>
+  
+
+
+
+
+  <script src="main.js">
+  </script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap'); 
+
+body {
+    background-color: black; 
+    padding: 200px 0; 
+    font-family: 'Overpass', Arial; 
+}
+.container {
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}
+.rating-box, .thanks-box {
+    background-color: hsl(215, 19%, 12%);
+    display: flex; 
+    flex-direction: column; 
+    width: 270px; 
+    padding: 20px; 
+    border-radius: 25px; 
+}
+
+    .star {
+      padding: 10px 0;  
+    }
+    .star-icon {
+      border-radius: 50%; 
+      border: none; 
+      background-color: hsl(213, 19%, 18%);
+      padding: 12px 14px 11px 14px; 
+    }
+    .star-icon img {
+      width: 12px; 
+    }
+
+    h1 {
+      color: white; 
+      font-size: 20px; 
+    }
+
+    .rating-content-text, .thanks-content-text {
+      font-size: 12px; 
+      color: hsl(216, 12%, 54%); 
+      line-height: 1.5; 
+    }
+
+
+    .rating-level {
+      display: flex; 
+      flex-direction: row; 
+      justify-content: space-between; 
+      margin: 25px 0; 
+    }
+    .rating-level button {
+      background-color: hsl(213, 19%, 18%);
+      padding: 12px 17px; 
+      border: none; 
+      border-radius: 50%; 
+      color: hsl(217, 12%, 63%); 
+      transition: all 0.15s; 
+    }
+    .rating-level button:hover {
+      background-color: hsl(25, 97%, 53%); 
+      color: white; 
+      cursor: pointer; 
+    }
+
+    .rating-submit {
+      display: flex; 
+      justify-content: center;
+    }
+    .rating-submit button {
+      font-size: 10px; 
+      letter-spacing: 2px;
+      background-color: hsl(25, 97%, 53%); 
+      border: none; 
+      border-radius: 20px; 
+      color: white; 
+      padding: 12px 110px; 
+      transition: all 0.15s; 
+
+    }
+    .rating-submit button:hover {
+      cursor: pointer; 
+      background-color: white;
+      color: hsl(25, 97%, 53%); 
+    }
+
+
+
+.thanks-box {
+    text-align: center; 
+    font-family: 'Overpass', Arial;
+    display: flex; 
+    align-items: center;
+    padding: 25px; 
+}
+.thanks-image {
+    margin: 15px 0; 
+}
+.thanks-noti {
+    background-color: hsl(213, 19%, 18%); 
+    color: hsl(25, 97%, 53%); 
+    font-size: 12px; 
+    padding: 5px 15px; 
+    border-radius: 20px; 
+    margin: 15px 0; 
+}
+.thanks-content {
+    margin-bottom: 20px; 
+}
