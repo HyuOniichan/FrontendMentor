@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+
+
+    body {
+      padding: 200px 0; 
+      font-family: 'Epilogue', sans-serif; 
+      background-color: hsl(0, 0%, 98%);
+    }
+
+
+    .introsection {
+      max-width: 1025px;
+    }
+
+
+    .header {
+      display: flex; 
+      flex-direction: row; 
+      gap: 50px; 
+      margin-bottom: 50px; 
+      font-size: 12px; 
+    }
+
+    .logo {
+      display: flex; 
+      align-items: center; 
+    }
+    .logo img {
+      width: 65px; 
+    }
+
+    .menu {
+      flex: 1; 
+      display: flex; 
+      flex-direction: row; 
+      gap: 40px; 
+      color:hsl(0, 0%, 41%); 
+      margin: 0; 
+      transition: all 0.15s; 
+    }
+    .menu > div {
+      display: flex; 
+      flex-direction: row; 
+      gap: 5px; 
+      align-items: center;
+      padding-bottom: 7px; 
+    }
+    .menu div:hover {
+      cursor: pointer; 
+      color:hsl(0, 0%, 8%); 
+    }
+    .menu p {
+      margin: 0; 
+    }
+
+    .menu-up-1, .menu-up-2 {
+      display: none; 
+    }
+    .menu-features:hover .menu-up-1 {
+      display: block; 
+    }
+    .menu-features:hover .menu-down-1 {
+      display: none; 
+    }
+    .menu-features:hover .menu-features-list {
+      visibility: visible;
+    }
+    .menu-company:hover .menu-up-2 {
+      display: block; 
+    }
+    .menu-company:hover .menu-down-2 {
+      display: none; 
+    }
+    .menu-company:hover .menu-company-list {
+      visibility: visible;
+    }
+
+    .menu-features, .menu-company {
+      position: relative; 
+    }
+    .menu-features-title, .menu-company-title {
+      display: flex; 
+      flex-direction: row; 
+      align-items: center;
+      gap: 5px; 
+    }
+    .menu-features-list {
+      visibility: hidden;
+      position: absolute; 
+      top: 40px; right: 0px; 
+      display: flex; 
+      flex-direction: column; 
+      gap: 15px; 
+      width: 100px;
+      background-color: white; 
+      padding: 20px; 
+      box-shadow: 0px 0px 20px rgb(180, 180, 180);
+      border-radius: 10px; 
+    }
+    .menu-company-list {
+      visibility: hidden;
+      position: absolute; 
+      top: 40px; left: 0px; 
+      display: flex; 
+      flex-direction: column; 
+      gap: 15px; 
+      width: 60px;
+      background-color: white; 
+      padding: 20px; 
+      box-shadow: 0px 0px 20px rgb(180, 180, 180);
+      border-radius: 10px;       
+    }
+    .menu-features-list-choice, .menu-company-list-choice {
+      display: flex; 
+      flex-direction: row; 
+      gap: 15px; 
+      align-items: center;
+      width: 200px; 
+    }
+    .menu-features-list-choice img, .menu-company-list-choice img {
+      width: 15px; 
+    }
+    .menu-features-list-choice p, .menu-company-list-choice p {
+      flex: 1; 
+    }
+
+
+
+    .account {
+      display: flex; 
+      flex-direction: row; 
+      align-items: center;
+      gap: 30px; 
+      padding-bottom: 7px; 
+    }
+    .account div {
+      color:hsl(0, 0%, 41%); 
+      transition: all 0.15s; 
+    }
+    .account div:hover {
+      cursor: pointer; 
+      color:hsl(0, 0%, 8%); 
+    }
+    .account button {
+      font-size: 12px; 
+      color:hsl(0, 0%, 41%); 
+      background-color: transparent;
+      border: 2px solid hsl(0, 0%, 41%); 
+      padding: 7px 14px; 
+      border-radius: 10px;
+      transition: all 0.15s; 
+    }
+    .account button:hover {
+      cursor: pointer; 
+      color:hsl(0, 0%, 8%); 
+      border-color:hsl(0, 0%, 8%);
+    }
+
+
+
+
+    .main {
+      display: flex;
+      flex-direction: row; 
+    }
+
+    h1 {
+      font-size: 65px; 
+    }
+
+
+    .main-info {
+      flex: 1; 
+      display: flex;
+      justify-content: center; 
+      align-items: flex-end;
+    }
+
+    .info {
+      display: flex; 
+      flex-direction: column; 
+      width: 430px; 
+    }
+    
+    .info-detail p {
+      color:hsl(0, 0%, 41%); 
+      line-height: 1.5; 
+      font-size: 16px;
+    }
+    .info-detail button {
+      background-color:hsl(0, 0%, 8%); 
+      color:hsl(0, 0%, 98%); 
+      border: 1px solid hsl(0, 0%, 8%); 
+      border-radius: 10px; 
+      padding: 12px 24px; 
+      font-weight: 700; 
+      font-size: 14px; 
+      margin-top: 25px; 
+      margin-bottom: 90px; 
+      transition: all 0.15s; 
+    }
+    .info-detail button:hover {
+      cursor: pointer; 
+      color:hsl(0, 0%, 8%); 
+      background-color:hsl(0, 0%, 98%);
+    }
+    .info-logo {
+      display: flex; 
+      flex-direction: row; 
+      gap: 40px; 
+    }
+    .info-logo img {
+      width: 90%; 
+    }
+
+
+
+    .image img {
+      width: 400px; 
+    }
+
+
+
+
+
+
+
+
+
+  </style>
+</head>
+<body>
+  <!--
+    Features
+  Company
+  Careers
+  About
+
+  Login
+  Register
+
+  Make remote work
+
+  Get your team in sync, no matter your location. Streamline processes, 
+  create team rituals, and watch productivity soar.
+
+  Learn more
+  
+  -->
+  
+  <div class="container">
+    <div class="introsection">
+
+      <div class="header">
+        <div class="logo">
+          <img src="images/logo.svg" /> 
+        </div>
+        <div class="menu">
+          <div class="menu-features">
+            <div class="menu-features-title">
+              <p> Features </p>
+              <img class="menu-up-1" src="images/icon-arrow-down.svg" alt="arrow-down" /> 
+              <img class="menu-down-1" src="images/icon-arrow-up.svg" alt="arrow-up" /> 
+            </div>
+            <div class="menu-features-list">
+              <div class="menu-features-list-choice">
+                <img src="images/icon-todo.svg" alt="menu" /> 
+                <p> Todo List </p>
+              </div>
+              <div class="menu-features-list-choice">
+                <img src="images/icon-calendar.svg" alt="menu" /> 
+                <p> Calender </p>
+              </div>
+              <div class="menu-features-list-choice">
+                <img src="images/icon-reminders.svg" alt="menu" /> 
+                <p> Reminders </p>
+              </div>
+              <div class="menu-features-list-choice">
+                <img src="images/icon-planning.svg" alt="menu" /> 
+                <p> Planning </p>
+              </div>
+            </div>
+          </div>
+          <div class="menu-company">
+            <div class="menu-company-title">
+              <p> Company </p>
+              <img class="menu-up-2" src="images/icon-arrow-down.svg" alt="arrow-down" /> 
+              <img class="menu-down-2" src="images/icon-arrow-up.svg" alt="arrow-up" /> 
+            </div>
+            <div class="menu-company-list">
+              <div class="menu-company-list-choice">
+                History 
+              </div>
+              <div class="menu-company-list-choice">
+                Our team 
+              </div>
+              <div class="menu-company-list-choice">
+                Blog 
+              </div>
+            </div>
+          </div>
+          <div class="menu-careers">
+            <p> Careers </p>
+          </div>
+          <div class="menu-about">
+            <p> About </p>
+          </div>
+        </div>
+        <div class="account">
+          <div> Login </div> 
+          <button> Register </button>
+        </div>
+      </div>
+
+      <div class="main">
+        <div class="main-info">
+          <div class="info">
+            <div class="info-detail">
+              <h1> Make remote work </h1>
+              <p> Get your team in sync, no matter your location. Streamline 
+                processes, create team rituals, and watch productivity soar.
+              </p>
+              <button> Learn more </button>
+            </div>
+            <div class="info-logo">
+              <div>
+                <img src="images/client-databiz.svg" />
+              </div>
+              <div>
+                <img src="images/client-audiophile.svg" />
+              </div>
+              <div>
+                <img src="images/client-meet.svg" />
+              </div>
+              <div>
+                <img src="images/client-maker.svg" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="image">
+          <img alt="hero" src="images/image-hero-desktop.png" /> 
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#"> HyuOniichan </a>.
+  </div>
+
+
+</body>
+</html>
