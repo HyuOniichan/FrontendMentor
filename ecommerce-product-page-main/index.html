@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | E-commerce product page</title>
+
+  <link rel="stylesheet" href="main.css" />
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  
+  <div class="container">
+    <div class="ecommerce-product">
+
+
+
+      <div class="header">
+        <div class="logo">
+          <img src="images/logo.svg" alt="logo" /> 
+        </div>
+        <div class="menu">
+          <div>Collections</div>
+          <div>Men</div>
+          <div>Women</div>
+          <div>About</div>
+          <div>Contact</div>
+        </div>
+        <div class="noti" id="newCart"> 
+          <img src="images/icon-cart.svg" alt="cart" />
+          <div id="noti"> 0 </div>
+          <div id="notiCart">
+            <div class="noticart-title">
+              Cart 
+            </div>
+            <div id="noticartBox">
+              <div class="noticart-detail">
+                <div class="noticart-detail-thumbnail">
+                  <img src="images/image-product-1-thumbnail.jpg" alt="thumbnail" /> 
+                </div>
+                <div class="noticart-detail-illus">
+                  <div> Fall Limited Edition Sneakers </div>
+                  <div> 
+                    <span>$125.00 x</span> <span id="notiCartNum"> 0 </span> 
+                    <span id="notiCartSum"> 0 </span>
+                  </div>
+                </div>
+                <div class="noticart-detail-del" id="deleteCart">
+                  <img src="images/icon-delete.svg" alt="delete" />  
+                </div>
+              </div>
+              <div class="noticart-check">
+                Checkout 
+              </div>
+            </div>
+            <div id="emptyCart">
+              Your cart is empty. 
+            </div>
+          </div>
+        </div>
+        <div class="avatar">
+          <img src="images/image-avatar.png" alt="avatar" /> 
+        </div>
+      </div>
+
+
+
+      <div class="main">
+
+        <div class="demo">
+          <div class="demo-show" onclick="showBox(1)">
+            <img src="images/image-product-1.jpg" alt="img" />
+          </div>
+          <div class="demo-image">
+            <div id="thumbnail1" class="demo-image-thumbnail" onclick="showBox(1)">
+              <img src="images/image-product-1-thumbnail.jpg" alt="thumbnail" /> 
+            </div>            
+            <div id="thumbnail2" class="demo-image-thumbnail" onclick="showBox(2)">
+              <img src="images/image-product-2-thumbnail.jpg" alt="thumbnail" /> 
+            </div>
+            <div id="thumbnail3" class="demo-image-thumbnail" onclick="showBox(3)">
+              <img src="images/image-product-3-thumbnail.jpg" alt="thumbnail" /> 
+            </div>
+            <div id="thumbnail4" class="demo-image-thumbnail" onclick="showBox(4)">
+              <img src="images/image-product-4-thumbnail.jpg" alt="thumbnail" /> 
+            </div>            
+          </div>
+        </div>
+
+        <div class="info">
+          <div class="info-company">
+            Sneaker Company
+          </div>
+          <div class="info-title">
+            <h1> Fall Limited Edition Sneakers </h1>
+          </div>
+          <div class="info-intro">
+            These low-profile sneakers are your perfect casual wear companion. 
+            Featuring a durable rubber outer sole, they’ll withstand everything 
+            the weather can offer.
+          </div>
+          <div class="info-price">
+            <div class="info-price-new">
+              $125.00
+            </div>
+            <div class="info-price-dis">
+              50%
+            </div>
+          </div>
+          <div class="info-price-origin">
+            $250.00
+          </div>
+          <div class="info-buy">
+            <div class="info-buy-num">
+              <div id="down"> - </div>
+              <div id="count"> 0 </div>
+              <div id="up"> + </div>
+            </div>
+            <div id="cart" class="info-buy-cart">
+              <div>
+                <img src="images/icon-cart.svg" alt="cart" /> 
+              </div>
+              <div> Add to cart </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="light-box"> 
+        <div class="box" id="lightBox">
+          <div class="box-main">
+            <div class="box-main-image">
+              <img id="boxImage1" src="images/image-product-1.jpg" alt="image" /> 
+              <img id="boxImage2" src="images/image-product-2.jpg" alt="image" /> 
+              <img id="boxImage3" src="images/image-product-3.jpg" alt="image" /> 
+              <img id="boxImage4" src="images/image-product-4.jpg" alt="image" /> 
+            </div>
+            <div class="box-main-move" id="prev">
+              <img src="images/icon-previous.svg" alt="prev" /> 
+            </div>
+            <div class="box-main-move" id="next">
+              <img src="images/icon-next.svg" alt="next" /> 
+            </div>
+          </div>
+          <div class="box-menu">
+            <div class="box-menu-thumbnail" id="boxThumbnail1" onclick="moveImage(1)">
+              <img src="images/image-product-1-thumbnail.jpg" alt="thumbnail" />
+            </div>
+            <div class="box-menu-thumbnail" id="boxThumbnail2" onclick="moveImage(2)">
+              <img src="images/image-product-2-thumbnail.jpg" alt="thumbnail" />
+            </div>
+            <div class="box-menu-thumbnail" id="boxThumbnail3" onclick="moveImage(3)">
+              <img src="images/image-product-3-thumbnail.jpg" alt="thumbnail" />
+            </div>
+            <div class="box-menu-thumbnail" id="boxThumbnail4" onclick="moveImage(4)">
+              <img src="images/image-product-4-thumbnail.jpg" alt="thumbnail" />
+            </div>
+          </div>
+          <div class="box-del" onclick="showBox(0)"> 
+            <!-- creat 2 svg, one is unchanged and the other is filled by orange, so that if it is hovered it will change color? -->
+            <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg"><path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" fill="#69707D" fill-rule="evenodd"/></svg>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+
+  </div>
+
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#"> HyuOniichan </a>.
+  </div>
+
+
+  <script src="main.js"></script>
+
+</body>
+</html>

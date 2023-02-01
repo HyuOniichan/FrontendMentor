@@ -1,0 +1,457 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+* {
+    font-family: 'Kumbh Sans', sans-serif; 
+}
+
+.container {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+    padding-bottom: 50px;
+}
+
+.ecommerce-product {
+    width: 900px; 
+    position: relative; 
+}
+
+
+
+.header {
+    display: flex; 
+    flex-direction: row; 
+    align-items: center;
+    border-bottom: 1px solid hsl(220, 14%, 75%);
+    padding-bottom: 20px; 
+    margin-bottom: 70px; 
+}
+.logo img {
+    width: 80%;
+}
+.noti {
+    position: relative; 
+    margin-left: 310px; 
+    transition: all 0.15s;
+}
+.noti:hover {
+    cursor: pointer; 
+}
+.noti img {
+    width: 80%; 
+}
+#noti {
+    position: absolute; 
+    top: -5px; right: -2px; 
+    display: none; 
+    background-color:hsl(26, 100%, 55%); 
+    color: white; 
+    font-weight: 700; 
+    font-size: 8px; 
+    padding: 0 6px; 
+    border-radius: 10px;
+}
+#notiCart {
+    position: absolute; 
+    bottom: -222px; right: -150px; 
+    display: flex; 
+    flex-direction: column; 
+    padding: 10px 0; 
+    border-radius: 10px; 
+    background-color: white; 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.311); 
+    width: 300px; 
+    display: none; 
+}
+#notiCartSum {
+    font-weight: 700; 
+    color: black; 
+}
+.noticart-title {
+    font-weight: 700; 
+    font-size: 14px; 
+    padding: 10px 0 20px 20px; 
+    border-bottom: 1px solid hsl(220, 14%, 75%); 
+}
+#noticartBox {
+    margin: 0 20px 0 20px; 
+}
+.noticart-detail {
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    padding: 20px 0; 
+    gap: 10px; 
+}
+.noticart-detail-thumbnail img {
+    width: 40px; 
+    border-radius: 5px; 
+}
+.noticart-detail-illus {
+    font-size: 14px; 
+    line-height: 1.5; 
+    color:hsl(219, 9%, 45%); 
+}
+.noticart-detail-del {
+    flex: 1; 
+}
+.noticart-detail-del:hover {
+    cursor: pointer; 
+}
+.noticart-detail-del img {
+    width: 60%; 
+}
+.noticart-check {
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    background-color:hsl(26, 100%, 55%); 
+    color: white; 
+    font-size: 12px; 
+    border-radius: 7px; 
+    padding: 15px 0; 
+    margin: -5px 0 15px 0; 
+}
+.noticart-check:hover {
+    cursor: pointer; 
+}
+#emptyCart {
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    font-weight: 700; 
+    font-size: 12px; 
+    color:hsl(219, 9%, 45%); 
+    display: none;
+    width: 100%; 
+    text-align: center;
+    padding-top: 60px; 
+    height: 80px; 
+    display: none; 
+}
+.avatar {
+    margin-left: 30px; 
+    width: 40px; 
+}
+.avatar img {
+    width: 100%; 
+    border-radius: 50%; 
+    border: 2px solid transparent; 
+    transition: all 0.15s;
+}
+.avatar img:hover {
+    border-color:hsl(26, 100%, 55%); 
+    cursor: pointer; 
+}
+.menu {
+    display: flex;
+    flex-direction: row; 
+    gap: 30px; 
+    margin-left: 20px;
+    color: hsl(219, 9%, 45%);
+    font-size: 12px; 
+    font-weight: 400; 
+}
+.menu div {
+    border-bottom: 3px solid transparent; 
+    transition: all 0.15s;
+}
+.menu div:hover {
+    cursor: pointer; 
+    color: black; 
+    border-bottom: 3px solid hsl(26, 100%, 55%);
+}
+
+
+
+
+
+
+
+
+.main {
+    display: flex; 
+    flex-direction: row;
+}
+
+
+
+
+.demo {
+    display: flex;
+    flex-direction: column; 
+    gap: 30px; 
+    width: 450px; 
+}
+.demo-show {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+}
+.demo-show img {
+    width: 80%; 
+    border-radius: 15px; 
+}
+.demo-show img:hover {
+    cursor: pointer; 
+}
+
+
+.demo-image {
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    gap: 26px; 
+}
+.demo-image div:first-child {
+    border: 2px solid hsl(26, 100%, 55%);
+    border-radius: 15px;
+    width: 70px; height: 70px; 
+}
+.demo-image div:first-child img {
+    opacity: 0.3; 
+}
+.demo-image div {
+    transition: all 0.15s;
+}
+.demo-image div:hover {
+    cursor: pointer; 
+    opacity: 0.5;
+}
+.demo-image-thumbnail {
+    width: 70px; 
+}
+.demo-image-thumbnail img {
+    width: 100%; 
+    border-radius: 10px; 
+}
+
+
+
+
+.info {
+    flex: 1; 
+    margin-left: 50px; 
+}
+.info-company {
+    color:hsl(26, 100%, 55%); 
+    font-weight: 700;
+    font-size: 11px; 
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+h1 {
+    margin-top: 15px; 
+    margin-bottom: 30px; 
+}
+.info-intro {
+    color:hsl(219, 9%, 45%); 
+    font-size: 14px; 
+    line-height: 1.5;
+    margin-bottom: 20px; 
+}
+.info-price {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+}
+.info-price-new {
+    font-size: 24px; 
+    font-weight: 700; 
+    margin-right: 15px; 
+}
+.info-price-dis {
+    font-size: 14px; 
+    font-weight: 700; 
+    color:hsl(26, 100%, 55%); 
+    padding: 3px 7px; 
+    border: none; 
+    border-radius: 5px; 
+    background-color: hsl(25, 100%, 94%);
+}
+.info-price-origin {
+    color:hsl(220, 14%, 75%); 
+    font-size: 14px; 
+    font-weight: 700; 
+    text-decoration: line-through; 
+    margin-top: 10px; 
+    margin-bottom: 30px; 
+}
+.info-buy {
+    display: flex; 
+    flex-direction: row; 
+    gap: 15px; 
+}
+.info-buy-num {
+    width: 130px;
+    height: 40px;
+    display: flex; 
+    flex-direction: row; 
+    align-items: center;
+    background-color: hsl(223, 64%, 98%);
+    border: none; 
+    border-radius: 5px; 
+    padding: 0; 
+    font-weight: 700;
+    text-align: center; 
+}
+#up, #down {
+    flex: 1; 
+    color:hsl(26, 100%, 55%); 
+    font-size: 23px; 
+    padding-bottom: 5px; 
+    transition: all 0.15s;
+}
+#up:hover, #down:hover {
+    cursor: pointer; 
+    opacity: 0.7;
+}
+#count {
+    flex: 2; 
+    font-size: 14px; 
+}
+.info-buy-cart {
+    displaY: flex; 
+    flex-direction: row; 
+    justify-content: center;
+    gap: 10px; 
+    background-color:hsl(26, 100%, 55%); 
+    color: white; 
+    height: 45px; 
+    width: 215px; 
+    border: none; 
+    border-radius: 10px; 
+    box-shadow: 0 10px 30px hsla(26, 100%, 55%, 0.307); 
+    transition: all 0.15s;
+}
+.info-buy-cart:hover {
+    cursor: pointer; 
+    opacity: 0.7; 
+}
+.info-buy-cart img {
+    fill: white; 
+    width: 15px; 
+}
+.info-buy-cart div {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    font-weight: 700; 
+    font-size: 12px; 
+}
+
+
+
+
+
+
+
+
+.lightbox {
+    position: fixed; 
+    top: 0; 
+    z-index: 1; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    min-height: 100vh; 
+}
+
+.box {
+    background-color:rgba(0, 0, 0, 0.311); 
+    display: flex; 
+    flex-direction: column;
+    position: absolute; 
+    top: 0; bottom: 0; right: 0; left: 0; 
+    z-index: 1;
+    padding-top: 30px; 
+    display: none; 
+}
+
+
+
+
+.box-main {
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    position: relative; 
+    padding-bottom: 20px; 
+}
+.box-main-image {
+    display: flex; 
+    flex-direction: row; 
+    max-width: 450px; 
+    gap: 20px; 
+}
+.box-main-image img {
+    width: 100%; 
+    border-radius: 10px; 
+}
+
+
+#boxImage1, #boxImage2, #boxImage3, #boxImage4 {
+    display: none; 
+}
+
+
+
+.box-main-move {
+    position: absolute; 
+    top: 50%; 
+    background-color: white; 
+    border-radius: 30px;  
+    padding: 10px 15px; 
+}
+.box-main-move:hover {
+    cursor: pointer; 
+}
+#prev {
+    left: 200px; 
+}
+#next {
+    right: 200px;
+}
+
+
+
+
+.box-menu {
+    display: flex;
+    flex-direction: row; 
+    gap: 20px; 
+    justify-content: center;
+}
+.box-menu-thumbnail {
+    width: 70px; height: 70px; 
+    border: 2px solid transparent; 
+    border-radius: 10px;
+}
+.box-menu img {
+    width: 100%;
+    border-radius: 10px; 
+    transition: all 0.15s;
+}
+.box-menu img:hover {
+    cursor: pointer; 
+    opacity: 0.7;
+}
+
+
+
+
+.box-del {
+    position: absolute; 
+    z-index: 1; 
+    right: 230px; top: 0px; 
+}
+.box-del svg:hover {
+    cursor: pointer;
+}
+
+
+
+
+
