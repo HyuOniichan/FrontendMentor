@@ -1,0 +1,234 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+* {
+    font-family: 'Josefin Sans', sans-serif; 
+}
+
+
+.container {
+    display: flex;
+    align-items: top; 
+    justify-content: center;
+    min-height: 100vh;
+    background: hsl(235, 21%, 11%); 
+}
+
+.box {
+    background: url(images/bg-desktop-dark.jpg) no-repeat; 
+    display: flex; 
+    width: 100%; 
+    justify-content: center;
+    align-items: center; 
+}
+
+
+
+
+.todoapp { 
+    /* position: absolute; */ 
+    display: flex; 
+    flex-direction: column; 
+    width: 450px;
+    gap: 30px; 
+}
+
+
+
+.header {
+    display: flex; 
+    flex-direction: column; 
+}
+.header-title {
+    display: flex; 
+    flex-direction: row; 
+    align-items: center; 
+}
+h1 {
+    color: white; 
+    font-weight: 700; 
+    letter-spacing: 12px;
+    margin: 20px 0; 
+}
+.header-title-change {
+    flex: 1; 
+    display: flex; 
+    justify-content: flex-end;
+}
+#sun:hover, #moon:hover {
+    cursor: pointer; 
+}
+
+
+.header-note {
+    width: 95%; 
+    background-color: hsl(235, 24%, 19%);
+    padding: 15px; 
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+.header-note button {
+    padding: 4px 5px; 
+    border-radius: 50%; 
+    border: 1px solid hsl(233, 14%, 35%); 
+    background-color: transparent;
+    transition: all 0.15s; 
+}
+.header-note button svg {
+    visibility: hidden;
+}
+.header-note button:hover {
+    cursor: pointer; 
+    border-color: hsl(236, 33%, 92%); 
+}
+.header-note input {
+    flex: 1; 
+    color: hsl(234, 39%, 85%); 
+    background: transparent; 
+    border: none; 
+    font-size: 14px; 
+    padding: 5px 0; 
+}
+.header-note:hover div {
+    display: block; 
+}
+.header-note div {
+    display: none; 
+}
+.header-note div:hover {
+    cursor: pointer; 
+}
+
+
+
+
+
+
+
+.main {
+    display: flex; 
+    flex-direction: column; 
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.303); 
+}
+
+
+#listNote {
+    max-height: 300px; 
+    overflow-y: auto;
+    overflow-x: hidden; 
+}
+
+
+
+.main-note-thing {
+    width: 100%; 
+    background-color: hsl(235, 24%, 19%);
+    padding: 15px; 
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+.main-note-thing button {
+    padding: 3px 5px; 
+    border-radius: 50%; 
+    border: 1px solid hsl(233, 14%, 35%); 
+    background-color: transparent;
+    transition: all 0.15s; 
+}
+.main-note-thing button:hover {
+    cursor: pointer; 
+    border-color: hsl(236, 33%, 92%); 
+}
+.main-note-thing button svg {
+    visibility: hidden;
+}
+.main-note-thing span {
+    flex: 1; 
+    color: hsl(234, 39%, 85%); 
+    background: transparent; 
+    border: none; 
+    font-size: 14px; 
+    padding: 5px 0; 
+}
+.main-note-thing span:hover {
+    cursor: pointer; 
+}
+.main-note-thing:hover div {
+    display: block; 
+}
+.main-note-thing div {
+    display: none; 
+}
+.main-note-thing div:hover {
+    cursor: pointer; 
+}
+
+
+
+
+
+
+.main-edit {
+    width: 100%; 
+    display: flex;
+    flex-direction: row; 
+    background-color: hsl(235, 24%, 19%);
+    padding: 15px 0; 
+    align-items: center; 
+    justify-content: space-around;
+    font-size: 10px; 
+    color: hsl(233, 14%, 35%);
+    font-weight: 700;
+}
+
+
+.main-edit-menu {
+    display: flex;
+    flex-direction: row; 
+    gap: 15px; 
+    transition: all 0.15s; 
+}
+.main-edit-menu div:hover {
+    cursor: pointer; 
+    color: hsl(236, 33%, 92%); 
+}
+
+
+
+.main-edit-clear {
+    transition: all 0.15s; 
+}
+.main-edit-clear:hover {
+    color: hsl(234, 39%, 85%); 
+    cursor: pointer; 
+}
+
+
+
+
+
+
+
+.footer {
+    font-size: 10px; 
+    text-align: center;
+    color: hsl(233, 14%, 35%); 
+}
+
+
+
+
+
+
+
+
+
+
