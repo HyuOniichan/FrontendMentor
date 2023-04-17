@@ -1,0 +1,246 @@
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+:root {
+    --desaturated-dark-cyan: hsl(180, 29%, 50%); 
+    --light-grayish-cyan-ft: hsl(180, 31%, 95%); /* Filter Tablets */ 
+    --light-grayish-cyan-bg: hsl(180, 52%, 96%); /* Background */ 
+    --dark-grayish-cyan: hsl(180, 8%, 52%);
+    --very-dark-grayish-cyan: hsl(180, 14%, 20%); 
+}
+
+* {
+    font-family: 'League Spartan', sans-serif;
+}
+
+body {
+    padding: 200px 0; 
+    background: url('./images/bg-header-desktop.svg') var(--light-grayish-cyan-bg) no-repeat;
+    position: relative;
+}
+
+
+.container {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    min-height: 100vh;
+}
+
+.box {
+    display: flex; 
+}
+
+.header {
+    position: absolute; 
+    top: 110px; 
+    left: calc(50% - 500px); 
+}
+
+
+
+
+.selector {
+    display: flex; 
+    flex-direction: row;
+    position: relative;
+    align-items: center;
+    width: 1000px; 
+    height: 70px;
+    border-radius: 5px;
+    background-color: var(--light-grayish-cyan-ft);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    overflow: auto;
+}
+
+.selector-find {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    padding: 5px; 
+}
+
+.selector-find-name {
+    background-color: hsla(180, 8%, 52%, 0.1);
+    color: var(--desaturated-dark-cyan);
+    font-weight: 500;
+    padding: 5px;
+}
+
+.selector-find-remove {
+    background-color: var(--desaturated-dark-cyan);
+    padding: 5px 5px 2px 5px;
+    transition: all 0.15s; 
+}
+.selector-find-remove:hover {
+    cursor: pointer;
+    background-color: var(--very-dark-grayish-cyan); 
+}
+
+.selector-clear {
+    position: absolute; 
+    right: 20px; 
+    display: flex;
+    font-weight: 700;
+    text-decoration: none; 
+    color: var(--very-dark-grayish-cyan);
+    transition: all 0.15s; 
+}
+.selector-clear:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    color: var(--desaturated-dark-cyan); 
+}
+
+
+
+
+
+
+.jobs {
+    display: flex;
+    flex-direction: column; 
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.job {
+    display: flex; 
+    flex-direction: row; 
+    align-items: center;
+    padding: 30px 35px;
+    width: 915px; 
+    border-radius: 5px;
+    border-left: 5px solid var(--light-grayish-cyan-ft); 
+    background-color: var(--light-grayish-cyan-ft);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.15s; 
+}
+.job:hover {
+    border-left: 5px solid var(--desaturated-dark-cyan); 
+}
+
+.job-logo {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    padding-right: 20px;
+}
+
+.job-info {
+    display: flex; 
+    flex-direction: column;
+}
+
+.job-info-props {
+    display: flex; 
+    flex-direction: row; 
+    align-items: center;
+    gap: 20px;
+}
+
+.job-info-props-company {
+    color: var(--desaturated-dark-cyan); 
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.job-info-props-stat {
+    display: flex;
+    font-weight: 700; 
+    font-size: 12px;
+    color: var(--light-grayish-cyan-ft); 
+    padding: 8px 9px 6px 9px; 
+    border-radius: 15px; 
+}
+.job-info-props-stat.new {
+    background-color: var(--desaturated-dark-cyan);
+}
+.job-info-props-stat.featured {
+    background-color: var(--very-dark-grayish-cyan);
+}
+
+h1 {
+    margin: 10px 0; 
+    color: var(--very-dark-grayish-cyan); 
+    font-weight: 700;
+    font-size: 22px;
+    transition: all 0.15s;
+}
+h1:hover {
+    cursor: pointer;
+    color: var(--desaturated-dark-cyan); 
+}
+
+.job-info-others {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    color: var(--dark-grayish-cyan); 
+    font-size: 17px; 
+    font-weight: 500;
+}
+
+
+
+
+
+.job-tags {
+    flex: 1; 
+    display: flex; 
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.job-tags-select {
+    background-color: hsla(180, 8%, 52%, 0.1);
+    padding: 7px; 
+    border-radius: 5px; 
+    font-weight: 700;
+    color: var(--desaturated-dark-cyan);
+    transition: all 0.15s; 
+}
+.job-tags-select:hover {
+    cursor: pointer;
+    background-color: var(--desaturated-dark-cyan);
+    color: var(--light-grayish-cyan-ft); 
+}
+
+
+
+
+
+
+
+.list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 5px 0; 
+    background-color: var(--light-grayish-cyan-ft);
+    font-size: 15px;
+}
+
+.list-choice {
+    background-color: hsla(180, 8%, 52%, 0.1);
+    padding: 7px; 
+    border-radius: 5px; 
+    font-weight: 500;
+    color: var(--desaturated-dark-cyan);
+    transition: all 0.15s; 
+}
+.list-choice:hover {
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
