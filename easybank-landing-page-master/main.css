@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap');
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+/* GENERAL */
+
+
+:root {
+    /* Primary */
+    --Dark-Blue: hsl(233, 26%, 24%); 
+    --Lime-Green: hsl(136, 65%, 51%); 
+    --Bright-Cyan: hsl(192, 70%, 51%); 
+    /* Neutral */
+    --Grayish-Blue: hsl(233, 8%, 62%); 
+    --Light-Grayish-Blue: hsl(220, 16%, 96%); 
+    --Very-Light-Gray: hsl(0, 0%, 98%); 
+    /* --White: hsl(0, 0%, 100%);  */
+    /* main */
+    --main-gradient: linear-gradient(90deg, var(--Lime-Green), var(--Bright-Cyan)); 
+}
+
+* {
+    font-family: 'Public Sans', sans-serif;
+}
+
+body {
+    position: relative;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; 
+    min-height: 100vh;
+    padding-bottom: 200px;
+}
+
+h1 {
+    color: var(--Dark-Blue);
+    font-size: 40px; 
+    font-weight: 400;
+    margin: 0; 
+}
+
+p {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--Grayish-Blue); 
+    line-height: 1.5;
+    margin: 0; 
+}
+
+
+
+/* HEADER */
+
+
+header {
+    position: fixed;
+    top: 0; left: 0; right: 0; 
+    height: 60px; 
+    background-color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin: auto;
+    justify-content: space-around; 
+    font-size: 14px; 
+    z-index: 100;
+}
+
+.logo {
+    background: url(./images/logo.svg) no-repeat; 
+    width: 150px; 
+    height: 20px;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px; 
+    height: 100%;
+}
+.nav div {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 300; 
+    color: var(--Grayish-Blue);
+    height: 100%;
+    border-bottom: 5px solid;
+    border-color: transparent;
+    transition: all 0.15s;     
+}
+.nav div:hover {
+    cursor: pointer;
+    border-image-slice: 1;
+    border-image-source: var(--main-gradient);
+    color: var(--Dark-Blue);
+}
+
+.request {
+    padding: 14px 36px; 
+    font-weight: 400;
+    font-size: 16px; 
+    border: none; 
+    border-radius: 30px; 
+    color: white; 
+    background: var(--main-gradient);
+    transition: all 0.15s;
+}
+.request:hover {
+    cursor: pointer;
+    opacity: 0.7;    
+}
+
+
+
+/* MAIN */
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+}
+
+    /* Intro Page */
+
+.intro {
+    display: flex;
+    flex-direction: row;
+    height: 750px;
+    width: 100%; 
+    justify-content: center;
+    align-items: center;
+    padding: 0 100px; 
+    background: var(--Very-Light-Gray);
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 450px; 
+}
+.info h1 {
+    font-size: 50px;
+}
+.info p {
+    margin: 35px 0; 
+}
+
+.background {
+    flex: 1; 
+    position: relative;
+}
+.background img {
+    position: absolute;
+}
+.background img:first-child {
+    right: 0; top: -400px;     
+    width: 800px; 
+    z-index: 1; 
+}
+.background img:last-child {
+    right: 100px; top: -350px;     
+    width: 600px; 
+    z-index: 2; 
+}
+
+    /* Why Page */
+
+.why {
+    display: flex;
+    flex-direction: column;
+    background: var(--Light-Grayish-Blue);  
+    padding: 100px; 
+    gap: 70px;
+}
+
+.brief h1 {
+    margin-bottom: 35px;
+}
+
+.features {
+    display: flex;
+    flex-direction: row;
+    gap: 20px; 
+}
+.feature {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; 
+}
+.feature h2 {
+    font-size: 24px; 
+    font-weight: 400;
+    margin: 0; 
+}
+.feature p {
+    font-size: 16px;
+}
+
+    /* Latest Page */
+
+.latest {
+    display: flex;
+    flex-direction: column;
+    padding: 100px; 
+    background: var(--Very-Light-Gray);
+    gap: 70px;
+}
+
+.articles {
+    display: flex;
+    flex-direction: row; 
+    gap: 20px;
+}
+
+.article {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    width: 250px;
+    border: none; 
+    border-radius: 5px;
+}
+.article:hover {
+    cursor: pointer;
+}
+.article img {
+    width: 100%; height: 200px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5px 5px 0 0;
+}
+.article div {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+}
+.creator {
+    font-size: 10px;
+}
+.title {
+    color: var(--Dark-Blue); 
+    line-height: normal;
+    margin: 10px 0; 
+    transition: all 0.15s;
+}
+.article:hover .title {
+    color: var(--Lime-Green); 
+}
+.description {
+    font-size: 12px; 
+}
+
+
+
+/* FOOTER */
+
+footer {
+    position: absolute;
+    bottom: 0; right: 0; left: 0; 
+    height: 200px;
+    background: var(--Dark-Blue);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 100px;
+}
+
+.logo-white {
+    background: url(./images/logo-white.svg) no-repeat; 
+    width: 150px; 
+    height: 20px;
+}
+
+.social {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.media {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    transition: all 0.15s; 
+}
+
+.icon {
+    height: 20px; width: 20px;
+    transition: all 0.15s;
+}
+.icon:hover {
+    cursor: pointer;
+}
+.facebook { background: url(./images/icon-facebook.svg) no-repeat; }
+.facebook:hover { background: url(./images/icon-facebook-hover.svg) no-repeat; }
+.youtube { background: url(./images/icon-youtube.svg) no-repeat; }
+.youtube:hover { background: url(./images/icon-youtube-hover.svg) no-repeat; }
+.twitter { background: url(./images/icon-twitter.svg) no-repeat; }
+.twitter:hover { background: url(./images/icon-twitter-hover.svg) no-repeat; }
+.pinterest { background: url(./images/icon-pinterest.svg) no-repeat; }
+.pinterest:hover { background: url(./images/icon-pinterest-hover.svg) no-repeat; }
+.instagram { background: url(./images/icon-instagram.svg) no-repeat; }
+.instagram:hover { background: url(./images/icon-instagram-hover.svg) no-repeat; }
+
+.navigation {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 15px 120px;
+    margin-left: 100px;
+}
+
+.navigation div {
+    color: var(--Very-Light-Gray); 
+    transition: all 0.15s;
+}
+.navigation div:hover {
+    cursor: pointer;
+    color: var(--Lime-Green); 
+}
+
+.author {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.copyright {
+    font-size: 16px;
+    color: var(--Grayish-Blue); 
+}
+
+
