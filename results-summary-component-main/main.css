@@ -1,0 +1,205 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+:root {
+    /* Primary */
+    --Light-red: hsl(0, 100%, 67%);
+    --Orangey-yellow: hsl(39, 100%, 56%);
+    --Green-teal: hsl(166, 100%, 37%);
+    --Cobalt-blue: hsl(234, 85%, 45%);
+    /* Primary - transparency */
+    --Light-red-transparency: hsl(0, 100%, 67%, 0.1);
+    --Orangey-yellow-transparency: hsl(39, 100%, 56%, 0.1);
+    --Green-teal-transparency: hsl(166, 100%, 37%, 0.1);
+    --Cobalt-blue-transparency: hsl(234, 85%, 45%, 0.1);
+
+    /* Gradients */
+    --Light-slate-blue /* (background) */: hsl(252, 100%, 67%);
+    --Light-royal-blue /* (background) */: hsl(241, 81%, 54%);    
+    --Violet-blue /* (circle) */: hsla(256, 72%, 46%, 1);
+    --Persian-blue /* (circle) */: hsla(241, 72%, 46%, 0);
+
+    /* Neutral */
+    /* White: hsl(0, 0%, 100%) */
+    --Pale-blue: hsl(221, 100%, 96%);
+    --Light-lavender: hsl(241, 100%, 89%);
+    --Dark-gray-blue: hsl(224, 30%, 27%);
+
+    /* Gradient */
+    --main-gradient: linear-gradient(180deg, var(--Light-slate-blue), var(--Light-royal-blue)); 
+}
+
+
+
+html {
+    font-size: 18px; 
+    font-family: 'Hanken Grotesk', sans-serif; 
+    box-sizing: border-box;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 1.4rem; 
+    font-weight: 700;
+    margin: 0; 
+}
+
+h2 {
+    font-size: 1rem; 
+    font-weight: 500;
+    margin: 0; 
+}
+
+p, span {
+    font-size: 1rem;
+    margin: 0; 
+}
+
+span {
+    color: var(--Light-lavender);
+}
+
+
+    /* MAIN */
+
+.container {
+    display: flex;
+    flex-flow: row nowrap;
+    position: relative;
+    box-shadow: 10px 10px 20px 5px rgb(0, 0, 0, 0.1);
+    border-radius: 20px;
+    width: 550px;
+}
+
+
+
+
+
+.result {
+    flex: 1; 
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    background: var(--main-gradient);
+    border-radius: 20px;
+    padding: 30px;
+    gap: 20px;
+}
+
+
+.result h1 {
+    color: var(--Light-lavender); 
+}
+
+
+
+.result-score {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    border: none; 
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(180deg, var(--Violet-blue), var(--Persian-blue));
+}
+
+
+#result {
+    color: white; 
+    font-weight: 800;
+    font-size: 3.2rem;
+}
+
+
+
+.result-message {
+    display: flex;
+    flex-flow: column nowrap;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+    gap: 10px;
+}
+.result-message h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+.result-message p {
+    font-size: 0.7rem;
+    line-height: 1.2;
+    color: var(--Light-lavender);
+}
+
+
+
+
+
+
+.summary {
+    flex: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 30px;
+    gap: 20px;
+}
+
+.summary-menu {
+    display: flex;
+    flex-flow: inherit;
+    gap: 10px;
+}
+
+
+
+
+.item {
+    display: flex;
+    flex-flow: row nowrap; 
+    padding: 10px;
+    border: none; 
+    border-radius: 10px;
+    gap: 30px;
+    align-items: center;
+}
+
+.item div {
+    display: flex;
+    flex-flow: inherit;
+}
+
+.item-info {
+    flex: 1;
+    gap: 10px;
+}
+
+
+button {
+    background: var(--Dark-gray-blue);
+    color: white; 
+    font-size: 0.8rem; 
+    font-weight: 500;
+    width: 100%; 
+    padding: 12px 0; 
+    border: none; 
+    border-radius: 20px;
+    transition: all 0.15s;
+}
+button:hover {
+    cursor: pointer;
+    background: var(--main-gradient);
+}
